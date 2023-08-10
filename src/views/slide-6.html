@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="/scripts/toggle-flex-items.js"></script>
     <script src="/scripts/set-css-rules-from-input-field.js"></script>
     <script src="/scripts/toggle-img.js"></script>
     <script src="/scripts/websocket.js"></script>
     <script src="/scripts/sidebar.js"></script>
 
-
     <title>align-items</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
+      <ul class="header">
+        <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
 
-        <ul class="header">
-            <button class="burger-sidebar"><i class="fa fa-bars"></i></button>
-
-            <li><a href="/">flex-home</a></li>
-            <li><a href="/slide-1">flex-container</a></li>
-            <li><a href="/slide-2">ejes en Flexbox</a></li>
-            <li><a href="/slide-3">flex-direction</a></li>
-            <li><a href="/slide-4">flex-wrap</a></li>
-            <li><a href="/slide-5">justify-content</a></li>
-            <li><a href="/slide-6">align-items</a></li>
-            <li><a href="/slide-7">flex-items</a></li>
-            <li><a href="/slide-8">flex-grow</a></li>
-            <li><a href="/slide-9">align-self</a></li>
-            <li><a href="/slide-10">Desafíos extra!</a></li>
-        </ul>
-
+        <li><a href="/">flex-home</a></li>
+        <li><a href="/slide-1">flex-container</a></li>
+        <li><a href="/slide-2">ejes en Flexbox</a></li>
+        <li><a href="/slide-3">flex-direction</a></li>
+        <li><a href="/slide-4">flex-wrap</a></li>
+        <li><a href="/slide-5">justify-content</a></li>
+        <li><a href="/slide-6">align-items</a></li>
+        <li><a href="/slide-7">flex-items</a></li>
+        <li><a href="/slide-8">flex-grow</a></li>
+        <li><a href="/slide-9">align-self</a></li>
+        <li><a href="/slide-10">Desafíos extra!</a></li>
+      </ul>
     </header>
     <main class="main-container">
-        <nav class="sidebar">
-            <h3>Tarea finalizada: <span id="finished"></span></h3>
-            <ul id="namesList">
-            </ul>
-        </nav>
+      <nav class="sidebar">
+        <h3>Tarea finalizada: <span id="finished"></span></h3>
+        <ul id="namesList"></ul>
+      </nav>
 
-
-        <div class="left-panel">
-            <h1 id="taskName">align-items<button id="finishTaskNotification" class="hidden"
-                    data-task="align-items">¡Terminé!
-                </button></h1>
-            <button id="toggleImg">Cerrar imagen</button>
-            <img src="/img/PdfFlexbox_Página_07.jpg" alt="" id="img">
-            <div class="instructionsContainer">
-                <h2 id="instructions">Agrego 1 flex items y lo acomodo como el ejemplo</h2>
-                <div class="createFlexItemContainer">
-                    <button role="button" class="createFlexItem addFlexButton" id="1">Flex-item 1</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="2">Flex-item 2</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="3">Flex-item 3</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="4">Flex-item 4</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="5">Flex-item 5</button>
-                    <button role="button" class="createFlexItem addFlexButton" id="6">Flex-item 6</button>
-                </div>
-                <label class="selector" for="flexContainer">
-                    .flex-container {
-                </label>
-                <textarea name="flexContainer" id="flexContainerRules" class="flexElementRules" cols="30"
-                    rows="10"></textarea>
-                <div class="selector">}</div>
-                <div id="flex-items-input-container"></div>
-            </div>
+      <div class="left-panel">
+        <h1 id="taskName">
+          align-items<button
+            id="finishTaskNotification"
+            class="hidden"
+            data-task="align-items"
+          >
+            <a href="/slide-7">¡Terminé!</a>
+          </button>
+        </h1>
+        <button id="toggleImg">Cerrar imagen</button>
+        <img src="/img/PdfFlexbox_Página_07.jpg" alt="" id="img" />
+        <div class="instructionsContainer">
+          <h2 id="instructions">
+            Agrego 1 flex items y lo acomodo como el ejemplo
+          </h2>
+          <div class="createFlexItemContainer">
+            <button role="button" class="createFlexItem addFlexButton" id="1">
+              Flex-item 1
+            </button>
+            <button role="button" class="createFlexItem addFlexButton" id="2">
+              Flex-item 2
+            </button>
+            <button role="button" class="createFlexItem addFlexButton" id="3">
+              Flex-item 3
+            </button>
+            <button role="button" class="createFlexItem addFlexButton" id="4">
+              Flex-item 4
+            </button>
+            <button role="button" class="createFlexItem addFlexButton" id="5">
+              Flex-item 5
+            </button>
+            <button role="button" class="createFlexItem addFlexButton" id="6">
+              Flex-item 6
+            </button>
+          </div>
+          <label class="selector" for="flexContainer">
+            .flex-container {
+          </label>
+          <textarea
+            name="flexContainer"
+            id="flexContainerRules"
+            class="flexElementRules"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="selector">}</div>
+          <div id="flex-items-input-container"></div>
         </div>
-        <div class="fill-container relative">
-            <div class="absolute w-100">
-                <div class="example-flex-container"
-                    style="display:flex;  justify-content: center; align-items: center;">
-                    <div class="item example-item item-1">1</div>
-                </div>
-            </div>
-            <div class="absolute on-top w-100">
-                <div class="managed-flex-container">
-
-                </div>
-            </div>
+      </div>
+      <div class="fill-container relative">
+        <div class="absolute w-100">
+          <div
+            class="example-flex-container"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div class="item example-item item-1">1</div>
+          </div>
         </div>
-
-
+        <div class="absolute on-top w-100">
+          <div class="managed-flex-container"></div>
+        </div>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>
